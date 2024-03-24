@@ -15,15 +15,19 @@ PHP program that generates a multiplication table of prime numbers.
 2. Clone this repository to your local machine.
 3. Navigate to the project directory in your terminal.
 4. Copy configuration.sample.php to configuration.php. Open with text editor ./configuration.php and set up your mysql server and credentials (inside storages -> mysql -> config).
-5. Before first use run the setup command:
+5. Install the composer packages
+    ```
+    composer Install
+   ```
+6. Before first use run the setup command:
     ```
    php bin/setup.php 
     ```
-6. Run the test suite
+7. Run the test suite
    ```
    ./vendor/bin/phpunit
    ```
-7. Run the program using the following command:
+8. Run the program using the following command:
 
     ```
     php prime_multiplication_table.php [count] [options]
