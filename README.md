@@ -17,7 +17,7 @@ PHP program that generates a multiplication table of prime numbers.
 4. Copy configuration.sample.php to configuration.php. Open with text editor ./configuration.php and set up your mysql server and credentials (inside storages -> mysql -> config).
 5. Install the composer packages
     ```
-    composer Install
+    composer install
    ```
 6. Before first use run the setup command:
     ```
