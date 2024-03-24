@@ -1,0 +1,19 @@
+version: '3'
+
+services:
+  database:
+    image: mysql:8.3
+    ports:
+      - "33066:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD:-root}
+      MYSQL_DATABASE: ${MYSQL_DATABASE:-prime_multiplication}
+      MYSQL_USER: ${MYSQL_USER:-user}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD:-secret}
+    volumes:
+      - database_data:/var/lib/postgresql/data:rw
+      # - ./docker/db/data:/var/lib/postgresql/data:rw
+
+volumes:
+  database_data:
+
