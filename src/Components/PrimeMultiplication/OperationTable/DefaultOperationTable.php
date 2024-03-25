@@ -9,7 +9,7 @@ class DefaultOperationTable implements OperationTableInterface
 {
     public function generateOperationTable($numberList, OperatorInterface $operation): iterable
     {
-        yield [...[''], ...$numberList]; //First row defined
+        yield [...[null], ...$numberList]; //First row defined
 
         foreach ($numberList as $rowPrime) {
             $row = [$rowPrime];

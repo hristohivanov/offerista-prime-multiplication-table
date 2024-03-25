@@ -14,9 +14,9 @@ class PrimeMultiplicationTableTest extends AbstractUnitTestCase
 
     public static function operationProvider(): \Generator
     {
-        yield [2, new MultiplicationOperation(), [['', 2, 3], [2, 4, 6], [3, 6, 9]]];
-        yield [2, new AdditionOperation(), [['', 2, 3], [2, 4, 5], [3, 5, 6]]];
-        yield [2, new ExponentiationOperation(), [['', 2, 3], [2, 4, 8], [3, 9, 27]]];
+        yield [2, new MultiplicationOperation(), [[null, 2, 3], [2, 4, 6], [3, 6, 9]]];
+        yield [2, new AdditionOperation(), [[null, 2, 3], [2, 4, 5], [3, 5, 6]]];
+        yield [2, new ExponentiationOperation(), [[null, 2, 3], [2, 4, 8], [3, 9, 27]]];
     }
 
     #[DataProvider('operationProvider')]
