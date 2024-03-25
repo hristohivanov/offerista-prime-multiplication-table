@@ -14,7 +14,7 @@ interface StorageInterface
      *
      * @throws StorageException
      */
-    public function saveData($table);
+    public function saveData($table, $multiplicationName): bool;
 
     /**
      * Used to execute all needed instructions before using the main program.

@@ -39,8 +39,9 @@ class CommandController
         $output = $this->configurationContainer->getOutputObject($inputParameters->getOutput());
         $output->output($resultData);
 
-        if ($this->configurationContainer->getStorageObject()->saveData($resultData)) {
-            CLI::writeLine("Saving Success!");
+        $tableName = sprintf('table-%s-%s', $inputParameters->getOperation(), $inputParameters->getCount());
+        if ($this->configurationContainer->getStorageObject()->saveData($resultData, $tableName)) {
+            CLI::writeLine("Saving Success! Table Name:" . $tableName);
         }
     }
 
